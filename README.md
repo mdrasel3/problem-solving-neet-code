@@ -1,2 +1,2 @@
-# problem-solving-neet-code-
+# problem-solving-neet-code
 repository for practice problem submission and tracking

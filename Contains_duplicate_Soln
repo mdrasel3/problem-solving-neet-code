@@ -1,0 +1,11 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        #Author U Mo
+        #here I am taking a set to remove the dupicate values
+        nums1=set(nums)
+        #now if there is duplicate the lenght of original list must be longer ptherwise it will be same
+
+        if len(nums)==len(nums1):
+            return False
+        else:
+            return True

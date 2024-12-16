@@ -22,5 +22,4 @@ class Solution:
             if target - value in val_and_idx:
                 return [val_and_idx[target - value], index]
             val_and_idx[value] = index
-            print([val_and_idx[target - value], index])
         return None

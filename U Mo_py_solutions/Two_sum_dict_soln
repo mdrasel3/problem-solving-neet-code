@@ -1,0 +1,12 @@
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        #take a key,value pair data structure
+        hm={}
+        #then loop through the list
+        for index,num in enumerate(nums):
+          
+            diff=target-num
+            #Try to check if the diff exists in dictionary
+            if diff in hm:
+                return[hm[diff],index]
+            hm[num]=index
+        return None

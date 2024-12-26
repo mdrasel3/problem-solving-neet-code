@@ -1,0 +1,11 @@
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        #Author Umo
+        #creating a dictionary for key,value pairs
+        freq={}
+        for i in nums:
+            freq[i]=freq.get(i,0)+1 #counter.Here get(i,0)checks if the value exists if yes retrieves the current count or take as 0
+        #step 2 ..now sort the keys according to values
+        top_k_keys = sorted(freq, key=freq.get, reverse=True)[:k]
+        sorted_top_k_keys = sorted(top_k_keys)
+        return sorted_top_k_keys

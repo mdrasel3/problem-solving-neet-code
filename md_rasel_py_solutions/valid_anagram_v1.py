@@ -9,7 +9,10 @@ Created on Wed Jan  1 18:34:04 2025
 # another string, but the order of the characters can be different.
 
 # Soln approach: check if the length of two strings is equal or not
-# 
+# using hashmap aka dict in python, track the frequency of each `char`
+# if the frequency of both strings matches, then it is anagram
+# Time complexity: O(n+m) where n=len(s) and m= len(t)
+# Space complexity: O(1) since we have 26 characters
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:

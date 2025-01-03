@@ -1,0 +1,22 @@
+from collections import defaultdict;
+class Solution:
+    #Author Umo
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+
+        dictionary_anagram=defaultdict(list)
+        #now loop through the given list
+
+        for s in strs:
+            count =[0]*26
+             #Now go through each char of individual string
+            for c in s:
+
+                #now populate count list using ASCII values
+                count[ord(c)-ord('a')]+=1  
+            # Here we are using Tuple instead of list because it's immutable
+            key=tuple(count)
+            #Now add that strings in sublist
+            dictionary_anagram[key].append(s)
+        return dictionary_anagram.values()
+
+      
